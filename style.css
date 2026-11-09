@@ -1,0 +1,403 @@
+/* =================================
+   BRAINWAVE - BLUE THEME
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080b1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* =================================
+   HEADER
+================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #10152b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.08);
+}
+
+header h1 {
+    color: #00e5ff;
+    letter-spacing: 3px;
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+/* =================================
+   GENERAL SECTIONS
+================================= */
+
+section {
+    padding: 90px 10%;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #00e5ff;
+}
+
+section > p {
+    color: #d0d8ee;
+    margin-bottom: 30px;
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #00e5ff;
+    color: #080b1a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: white;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.4);
+}
+
+/* =================================
+   HOME SECTION
+================================= */
+
+#home {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #10152b, #25104a);
+}
+
+#home h2 {
+    font-size: 55px;
+    color: #00e5ff;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #e0e8ff;
+}
+
+/* =================================
+   LEARN SECTION
+================================= */
+
+#learn {
+    background: #10152b;
+}
+
+.learn-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.learn-card {
+    background: linear-gradient(145deg, #191f3e, #11162e);
+    padding: 30px 22px;
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.learn-card:hover {
+    transform: translateY(-8px);
+    border-color: #00e5ff;
+    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.15);
+}
+
+.learn-card h3 {
+    color: #00e5ff;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.learn-card p {
+    color: #d0d8ee;
+    margin-bottom: 20px;
+}
+
+.learn-card button {
+    padding: 10px 25px;
+}
+
+/* LESSON CONTENT */
+
+#lesson-content {
+    margin-top: 35px;
+}
+
+.lesson-box {
+    background: #191f3e;
+    border: 1px solid #00e5ff;
+    border-radius: 18px;
+    padding: 35px;
+    margin-top: 25px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.08);
+}
+
+.lesson-box h3 {
+    color: #00e5ff;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.lesson-box p {
+    color: #e0e8ff;
+    margin-bottom: 15px;
+}
+
+/* =================================
+   QUIZ ARENA
+================================= */
+
+#play {
+    background: linear-gradient(135deg, #17112e, #10152b);
+}
+
+#play select {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 2px solid #00e5ff;
+    background: #080b1a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#play h3 {
+    margin: 30px 0;
+    font-size: 24px;
+    color: #00e5ff;
+}
+
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+#answers button {
+    min-width: 200px;
+    background: #252044;
+    color: white;
+    border: 1px solid #00e5ff;
+}
+
+#answers button:hover {
+    background: #00e5ff;
+    color: #080b1a;
+}
+
+#answers button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* CORRECT AND WRONG ANSWERS */
+
+#answers button.correct {
+    background: #16a34a;
+    color: white;
+    border: 2px solid #4ade80;
+}
+
+#answers button.wrong {
+    background: #dc2626;
+    color: white;
+    border: 2px solid #f87171;
+}
+
+/* QUIZ INFORMATION */
+
+#result {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#score {
+    color: #00e5ff;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#progress {
+    color: #00e5ff;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+#nextButton {
+    margin-top: 15px;
+}
+
+/* =================================
+   DISCOVER SECTION
+================================= */
+
+#discover {
+    background: #10152b;
+}
+
+.discover-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.discover-card {
+    background: linear-gradient(145deg, #191f3e, #11162e);
+    padding: 30px 22px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    transition: 0.3s;
+}
+
+.discover-card:hover {
+    transform: translateY(-8px);
+    border-color: #00e5ff;
+    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.15);
+}
+
+.discover-card h3 {
+    color: #00e5ff;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.discover-card p {
+    color: #d0d8ee;
+}
+
+/* =================================
+   RANDOM FACT GENERATOR
+================================= */
+
+.random-fact {
+    margin-top: 55px;
+    padding: 40px 25px;
+    background: linear-gradient(135deg, #191f3e, #25104a);
+    border: 1px solid #00e5ff;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.1);
+}
+
+.random-fact h3 {
+    color: #00e5ff;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.random-fact p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #10152b;
+    color: #aaa;
+    border-top: 1px solid rgba(0, 229, 255, 0.15);
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    #home h2 {
+        font-size: 38px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .lesson-box {
+        padding: 22px;
+    }
+
+    #answers button {
+        width: 100%;
+    }
+
+}
